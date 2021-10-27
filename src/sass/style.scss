@@ -1,0 +1,538 @@
+@import "./vendors/normalize.scss";
+@import "./vendors/CSS-grid.scss";
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+// @import "./vendors/fonts.scss";
+
+.Header {
+  .top-header {
+    width: 100%;
+    height: auto;
+    background-color: $primary_color;
+    .top-header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: auto;
+      @media screen and (max-width: $md) {
+        flex-direction: column;
+      }
+      .right {
+        display: flex;
+        padding: 12px 0;
+        .location {
+          display: flex;
+          align-items: center;
+        }
+        .email {
+          display: flex;
+          align-items: center;
+          margin-left: 51px;
+        }
+        .top-header-text {
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: left;
+          color: #212529;
+          margin-left: 10px;
+        }
+      }
+      .left {
+        display: flex;
+        padding: 12px 0;
+        .header-icons {
+          width: 132px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    width: 100%;
+    height: 100px;
+    background-color: $secondary_color;
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      height: 100px;
+      .logo {
+        display: flex;
+        align-items: center;
+        .logo-text {
+          font-family: "Inter", sans-serif;
+          font-weight: normal;
+          font-size: 24px;
+          text-align: left;
+          color: #002147;
+          margin-left: 12px;
+        }
+      }
+      .menus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .nav {
+          .nav-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+            width: 326px;
+            .nav-item {
+              font-family: "Inter", sans-serif;
+              font-weight: bold;
+              font-size: 16px;
+              text-align: center;
+              color: #002147 !important;
+            }
+          }
+        }
+
+        .buttons {
+          margin-left: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .signUp {
+            width: 115px;
+            height: 44px;
+            border-radius: 4px;
+            background: #fdc800;
+            border: none;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+            color: #002147;
+            cursor: pointer;
+          }
+          .Search {
+            width: 44px;
+            height: 44px;
+            border-radius: 4px;
+            background: #fff;
+            border: 1px solid #bdbdbd;
+            margin-left: 16px;
+            padding: 10px;
+            cursor: pointer;
+          }
+        }
+        @media screen and (max-width: $lg) {
+          display: none;
+        }
+      }
+      .menu-icon {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        display: none;
+        > div {
+          width: 100%;
+          height: 3px;
+          background-color: #695d86;
+          margin-bottom: 5px;
+          margin: 4px 0px;
+          transition: 0.4s;
+        }
+        @media screen and (max-width: $lg) {
+          display: block;
+        }
+      }
+      @media screen and (max-width: $lg) {
+        padding: 0 15px;
+      }
+      .sidebar {
+        width: 300px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: #fff;
+        display: none;
+        @media screen and (max-width: $lg) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.subHeader {
+  width: 100%;
+  height: auto;
+  background: $secondary_color;
+  .subHeader-content {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    .SubHeader-right {
+      .become-master {
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: left;
+        color: #002147;
+      }
+      .learn-skills {
+        font-family: "Georgia";
+        font-weight: normal;
+        font-size: 60px;
+        text-align: left;
+        color: #002147;
+      }
+      .subHeader-btns {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        .btn-quote {
+          width: 181px;
+          height: 54px;
+          border-radius: 4px;
+          background: $primary_color;
+          border: none;
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          text-align: center;
+          color: #002147;
+          cursor: pointer;
+        }
+        .btn-readmore {
+          width: 181px;
+          height: 54px;
+          border-radius: 4px;
+          background: #fff;
+          border: 1px solid #bdbdbd;
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          text-align: center;
+          color: #002147;
+          cursor: pointer;
+          margin-left: 12px;
+        }
+      }
+      @media screen and (max-width: $lg) {
+        padding: 0 15px;
+      }
+    }
+    .SubHeader-left {
+      @media screen and (max-width: $lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+/*Subscribe Now*/
+.Subscribenow {
+  width: 100%;
+  background-color: #fff;
+  .subs-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 80px 0;
+    .img {
+      @media screen and (max-width: $lg) {
+        display: none;
+      }
+    }
+    .subscribe-now-text {
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 60px;
+      text-align: left;
+      color: $primary_color;
+    }
+    .large-text {
+      font-family: "Georgia";
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 60px;
+      text-align: left;
+      color: #002147;
+    }
+    .input-field {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .email-inpt {
+        width: 570px;
+        height: 56px;
+        border-radius: 4px;
+        background: #fff;
+        border: 1px solid #bdbdbd;
+        margin-top: 26px;
+        font-family: "Inter", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 60px;
+        text-align: left;
+        color: #bdbdbd;
+      }
+      .btn-subcribe {
+        position: absolute;
+        width: 164px;
+        height: 44px;
+        border-radius: 4px;
+        background: $primary_color;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: #002147;
+        border: none;
+        cursor: pointer;
+        bottom: 6px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+/*Contact Us*/
+.contactus {
+  width: 100%;
+  .container {
+    .contact-form {
+      padding: 60px 0;
+      .contact-text {
+        font-family: "Georgia";
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 60px;
+        text-align: left;
+        color: #002147;
+      }
+    }
+  }
+}
+
+.inpt {
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #bdbdbd;
+  margin-top: 26px;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 60px;
+  text-align: left;
+  color: #bdbdbd;
+  padding-left: 15px;
+  transition: all 0.5 ease;
+}
+.message {
+  width: 100%;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #bdbdbd;
+  margin-top: 26px;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 60px;
+  text-align: left;
+  color: #bdbdbd;
+  padding-left: 15px;
+}
+
+.btn-sbmit {
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  background: $primary_color;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #002147;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/*todo list*/
+.Courses {
+  width: 100%;
+
+  .container {
+    .todo-list {
+      padding: 60px 0;
+
+      .courses-heading {
+        font-family: "Georgia";
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 60px;
+        text-align: left;
+        color: #002147;
+      }
+      .add-items {
+        position: relative;
+        .add-course {
+          font-family: Inter;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 60px;
+          text-align: left;
+          color: $primary_color;
+        }
+        .add-item-inpt {
+          width: 100%;
+          height: 56px;
+          border-radius: 4px;
+          background: #fff;
+          border: 1px solid #bdbdbd;
+          // margin-top: 10px;
+          font-family: "Inter", sans-serif;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 60px;
+          text-align: left;
+          color: #bdbdbd;
+          padding-left: 15px;
+        }
+        .fa-plus {
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+          cursor: pointer;
+        }
+      }
+      .show-items {
+        margin-top: 15px;
+        width: 98%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $primary_color;
+        border-radius: 5px;
+        padding: 0 15px;
+        transition: all 0.5s ease;
+
+        &:hover {
+          padding: 0 20px;
+        }
+
+        .item-name {
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          text-align: center;
+          color: #002147;
+          border: none;
+          cursor: pointer;
+        }
+        .fa-trash {
+          cursor: pointer;
+        }
+      }
+      .todo {
+        height: 400px;
+        overflow-y: auto;
+        margin-top: 15px;
+        padding-left: 15px;
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $primary_color;
+        }
+      }
+    }
+  }
+}
+
+/*Sign up*/
+.signup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+/*add user*/
+.add-user {
+  width: 100%;
+  padding: 60px 0;
+  .add-user-heading {
+    font-family: "Georgia";
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: left;
+    color: #002147;
+  }
+  .lbl-text {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: left;
+    color: $primary_color;
+  }
+  .user-inpt {
+    width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    // margin-top: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: left;
+    color: #bdbdbd;
+    padding-left: 15px;
+  }
+  .btn-add{
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    background: $primary_color;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #002147;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .table{
+    width: 100%;
+    tr{
+      border:1px solid #002147;
+      margin: 0;
+      th{
+        border:1px solid #002147;
+      }
+      td{
+        border:1px solid #002147;
+        text-align: center;
+      }
+    }
+  }
+}
